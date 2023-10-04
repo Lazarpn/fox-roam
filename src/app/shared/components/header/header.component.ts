@@ -21,10 +21,4 @@ export class HeaderComponent implements OnInit {
       this.role = userRole;
     });
   }
-
-  onSignOut() {
-    this.authService.signOut();
-    this.role = null;
-    this.isAuthenticated = false;
-  }
 }

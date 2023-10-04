@@ -4,14 +4,11 @@ import { AuthService } from '../services/auth.service';
 
 @Injectable({ providedIn: 'root' })
 export class UnauthenticatedGuard implements CanActivate {
-  constructor(
-    private authService: AuthService,
-    private router: Router
-  ) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   canActivate(): boolean | UrlTree {
     if (this.authService.authenticated()) {
-      return this.router.createUrlTree(['/meals']);
+      return this.router.createUrlTree(['']);
     }
     return true;
   }

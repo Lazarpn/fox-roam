@@ -4,6 +4,7 @@ import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { LS_USER_LANGUAGE, LS_USER_ROLES, LS_USER_TOKEN } from '../constants';
 import { environment } from 'src/environments/environment.prod';
 import { AuthResponseModel } from '../models/user/auth-response.model';
+import { RecommendationService } from './recommendation.service';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
@@ -11,7 +12,7 @@ export class AuthService {
   private url: string = `${environment.url}/api`;
   userRole = new BehaviorSubject<string>(null);
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient, private recommendationService: RecommendationService) {}
 
   // googleLogin(model: GoogleLoginModel): Observable<AuthResponseModel> {
   //   return this.http.post<AuthResponseModel>(`${this.url}/accounts/login/google`, model);
@@ -52,6 +53,11 @@ export class AuthService {
   autoSignIn() {
     const token = localStorage.getItem(LS_USER_TOKEN);
     if (!token) {
+      // TODO: ovde ide logika za personalizovanu boju
+      // vratiti u zavisnosti od npr. godisnjeg doba ako nema na user entitetu boju
+      // u suprotnom ako je logovan onda boja ide sa back-a
+      // ideja da se mozda boja za neulogovanog user-a craft-uje dok user bira sugestije
+      this.recommendationService.setWebsitePrimaryColorBasedOnDate();
       return;
     }
     const parsedToken = this.parseJwt(token);
