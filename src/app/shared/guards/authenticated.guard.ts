@@ -6,15 +6,12 @@ import { AuthService } from '../services/auth.service';
   providedIn: 'root',
 })
 export class AuthenticatedGuard implements CanActivate {
-  constructor(
-    private authService: AuthService,
-    private router: Router
-  ) {}
+  constructor(private authService: AuthService, private router: Router) {}
 
   canActivate(): boolean | UrlTree {
     const isAuth = this.authService.authenticated();
     if (!isAuth) {
-      return this.router.createUrlTree(['/auth']);
+      return this.router.createUrlTree(['/sign-in']);
     }
     return true;
   }

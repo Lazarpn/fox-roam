@@ -7,6 +7,8 @@ import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { AuthInterceptorService } from './shared/services/auth-interceptor.service';
 import { HttpLoaderFactory } from './shared/loaders/http-loader-factory';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [FrComponent],
@@ -22,6 +24,7 @@ import { HttpLoaderFactory } from './shared/loaders/http-loader-factory';
         deps: [HttpClient],
       },
     }),
+    BrowserAnimationsModule,
   ],
   providers: [
     {
@@ -29,6 +32,7 @@ import { HttpLoaderFactory } from './shared/loaders/http-loader-factory';
       useClass: AuthInterceptorService,
       multi: true,
     },
+    { provide: MAT_SNACK_BAR_DEFAULT_OPTIONS, useValue: { duration: 3500 } },
   ],
   bootstrap: [FrComponent],
 })

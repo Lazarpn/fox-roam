@@ -1,7 +1,8 @@
 {
   "label": {
     "recommendation": "preporuka",
-    "arrangement": "aranžman"
+    "arrangement": "aranžman",
+    "agencies": "agencije"
   },
   "errors": {
     "RequestInvalid": "",
