@@ -1,0 +1,14 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px 0 20px 0;
+  overflow: hidden;
+  box-shadow: 0 0 10px 0px rgba(177, 177, 177, 0.5);
+}
+
+.image {
+  height: 55%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}

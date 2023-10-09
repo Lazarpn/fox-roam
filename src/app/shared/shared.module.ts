@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { HeaderComponent } from './components/header/header.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from './loaders/http-loader-factory';
 import { HttpClient } from '@angular/common/http';
@@ -11,7 +10,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { ImageCropperModule } from 'ngx-image-cropper';
 
 @NgModule({
-  declarations: [HeaderComponent, CapitalizePipe, ImageCropperModalComponent],
+  declarations: [CapitalizePipe, ImageCropperModalComponent],
   imports: [
     CommonModule,
     ImageCropperModule,
@@ -25,6 +24,6 @@ import { ImageCropperModule } from 'ngx-image-cropper';
       },
     }),
   ],
-  exports: [HeaderComponent, ImageCropperModalComponent, MatCommonModule, MatDialogModule],
+  exports: [ImageCropperModalComponent, MatCommonModule, MatDialogModule, CapitalizePipe],
 })
 export class SharedModule {}

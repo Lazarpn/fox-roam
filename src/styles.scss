@@ -6,6 +6,9 @@
   --color-white: #fff;
   --color-primary: #fdb74d;
   --color-primary-dark: #e79d2c;
+
+  // PADDING
+  --global-padding: 40px;
 }
 *,
 *::after,
@@ -49,5 +52,11 @@ body {
   }
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}

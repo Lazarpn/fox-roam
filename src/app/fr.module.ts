@@ -9,9 +9,10 @@ import { AuthInterceptorService } from './shared/services/auth-interceptor.servi
 import { HttpLoaderFactory } from './shared/loaders/http-loader-factory';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
+import { HeaderComponent } from './shared/components/header/header.component';
 
 @NgModule({
-  declarations: [FrComponent],
+  declarations: [FrComponent, HeaderComponent],
   imports: [
     BrowserModule,
     FrRoutingModule,
