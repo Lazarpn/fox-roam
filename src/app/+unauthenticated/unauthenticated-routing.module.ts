@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { SignUpModalComponent } from './sign-up-modal/sign-up-modal.component';
 import { SignInModalComponent } from './sign-in-modal/sign-in-modal.component';
 import { ArrangementsPreviewResolver } from '../shared/resolvers/arrangements-preview.resolver';
+import { ArrangementsModule } from '../+user/+arrangements/arrangements.module';
 
 const routes: Routes = [
   {
@@ -15,10 +16,12 @@ const routes: Routes = [
   },
   {
     path: 'arrangements',
-    component: SignUpModalComponent,
-    resolve: {
-      arrangements: ArrangementsPreviewResolver,
-    },
+    loadChildren: () =>
+      import('../+user/+arrangements/arrangements.module').then(m => m.ArrangementsModule),
+  },
+  {
+    path: 'agencies',
+    loadChildren: () => import('../+user/+agencies/agencies.module').then(m => m.AgenciesModule),
   },
 ];
 

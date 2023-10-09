@@ -3,7 +3,7 @@ import { Resolve } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
 
 @Injectable({ providedIn: 'root' })
-export class ArrangementAdminResolver implements Resolve<void> {
+export class AgenciesPreviewAdminResolver implements Resolve<void> {
   private url = environment.url + '/api';
 
   // constructor(private http: HttpClient, private profileService: ProfileService) {
