@@ -1,16 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SignInComponent } from './sign-in/sign-in.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
+import { SignUpModalComponent } from './sign-up-modal/sign-up-modal.component';
+import { SignInModalComponent } from './sign-in-modal/sign-in-modal.component';
+import { ArrangementsPreviewResolver } from '../shared/resolvers/arrangements-preview.resolver';
 
 const routes: Routes = [
   {
     path: 'sign-in',
-    component: SignInComponent,
+    component: SignInModalComponent,
   },
   {
     path: 'sign-up',
-    component: SignUpComponent,
+    component: SignUpModalComponent,
+  },
+  {
+    path: 'arrangements',
+    component: SignUpModalComponent,
+    resolve: {
+      arrangements: ArrangementsPreviewResolver,
+    },
   },
 ];
 
