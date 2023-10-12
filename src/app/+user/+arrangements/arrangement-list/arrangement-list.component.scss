@@ -1,5 +1,5 @@
 :host {
-  padding: var(--global-padding);
+  padding: var(--small-global-padding);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-auto-rows: 400px;

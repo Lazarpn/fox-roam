@@ -8,8 +8,10 @@
   --color-primary-dark: #e79d2c;
 
   // PADDING
-  --global-padding: 40px;
+  --full-global-padding: 15px 350px;
+  --small-global-padding: 15px 60px;
 }
+
 *,
 *::after,
 *::before {

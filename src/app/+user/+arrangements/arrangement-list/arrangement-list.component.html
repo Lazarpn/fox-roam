@@ -1,6 +1,5 @@
-<fr-arrangement-preview> </fr-arrangement-preview>
-<fr-arrangement-preview> </fr-arrangement-preview>
-<fr-arrangement-preview> </fr-arrangement-preview>
-<fr-arrangement-preview> </fr-arrangement-preview>
-<fr-arrangement-preview> </fr-arrangement-preview>
+<fr-arrangement-preview
+  *ngFor="let arrangment of arrangements"
+  (click)="onOpenArrangment(arrangment.id)">
+</fr-arrangement-preview>
 <!-- <fr-arrangement-preview> </fr-arrangement-preview> -->

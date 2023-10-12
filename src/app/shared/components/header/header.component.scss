@@ -2,8 +2,8 @@
 
 :host {
   height: 80px;
-  // TODO: staviti globalni padding
-  padding: 15px 60px;
+  // TODO: staviti logiku za menjanje padding-a
+  padding: var(--full-global-padding);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -20,6 +20,14 @@
     padding-top: 15px;
     height: auto;
   }
+}
+
+.small-global-padding {
+  padding: var(--small-global-padding);
+}
+
+.full-global-padding {
+  padding: var(--full-global-padding);
 }
 
 .header-nav {

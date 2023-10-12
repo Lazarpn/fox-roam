@@ -1,8 +1,8 @@
 <nav class="header-nav">
-  <div class="logo" routerLInk=""></div>
+  <div class="logo" (click)="onLogoClicked()"></div>
   <ul class="header-list">
     <li class="header-item">
-      <a class="header-link" routerLink="">
+      <a class="header-link" routerLink="/recommendations">
         {{ 'label.recommendation' | translate | capitalize }}
       </a>
     </li>
