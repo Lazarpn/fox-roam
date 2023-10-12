@@ -1,5 +1,6 @@
 :host {
   cursor: pointer;
+  position: relative;
   display: flex;
   flex-direction: column;
   border-radius: 20px 0 20px 0;
@@ -12,4 +13,66 @@
   width: 100%;
   background-size: cover;
   background-position: center;
+}
+
+.content-wrapper {
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.heading-wrapper {
+  display: flex;
+  // align-items: center;
+}
+
+.arrangement-title {
+  color: var(--color-primary);
+  font-size: 22px;
+}
+
+.icon-location {
+  color: var(--color-primary);
+}
+
+.agency-title {
+}
+
+.price {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.tags-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tag {
+  background-color: var(--color-primary);
+  border-radius: 10px;
+  padding: 7px 20px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.offer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.offer-expiration {
+}
+
+.icon-clock {
+  color: var(--color-primary);
+}
+
+.icon-heart {
+  position: absolute;
+  color: var(--color-primary);
+  top: 45%;
+  // top: 56%;
+  right: 5%;
 }

@@ -7,6 +7,7 @@ import { HttpLoaderFactory } from 'src/app/shared/loaders/http-loader-factory';
 import { ArrangementsRoutingModule } from './arrangements-routing.module';
 import { ArrangementListComponent } from './arrangement-list/arrangement-list.component';
 import { ArrangementPreviewComponent } from './arrangement-list/arrangement-preview/arrangement-preview.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ArrangementPreviewComponent } from './arrangement-list/arrangement-prev
   imports: [
     CommonModule,
     SharedModule,
+    MatIconModule,
     ArrangementsRoutingModule,
     HttpClientModule,
     TranslateModule.forChild({

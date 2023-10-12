@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { LS_USER_ROLES } from '../../constants';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { ModalsService } from '../../services/modals.service';
 
 @Component({
   selector: 'fr-header',
@@ -15,7 +16,8 @@ export class HeaderComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private modalsService: ModalsService
   ) {}
 
   ngOnInit(): void {
@@ -30,5 +32,13 @@ export class HeaderComponent implements OnInit {
 
   onLogoClicked() {
     this.router.navigate(['/arrangements'], { relativeTo: this.route });
+  }
+
+  onOpenSignInModal() {
+    this.modalsService.openSignInModal();
+  }
+
+  onOpenSignUpModal() {
+    this.modalsService.openSignUpModal();
   }
 }

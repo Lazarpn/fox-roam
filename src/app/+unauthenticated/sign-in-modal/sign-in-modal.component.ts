@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material/dialog';
+import { Component, Inject, OnInit } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 export interface SignInModalDialogData {
   dataa: any;
@@ -13,16 +13,12 @@ export interface SignInModalDialogData {
   styleUrls: ['./sign-in-modal.component.scss'],
 })
 export class SignInModalComponent implements OnInit {
-  constructor(private dialog: MatDialog) {}
+  constructor(
+    @Inject(MAT_DIALOG_DATA) public data: SignInModalComponent,
+    private dialogRef: MatDialogRef<SignInModalDialogData>
+  ) {}
 
   ngOnInit(): void {
     console.log('nesto');
-    // const dialogRef = this.dialog.open(SignInModalComponent, {
-    //   width: '600px',
-    //   // panelClass: 'fullscreen-dialog',
-    //   // data: {
-    //   // dataa: event,
-    //   // } as SignInModalDialogData,
-    // });
   }
 }

@@ -17,5 +17,23 @@
       </a>
     </li>
   </ul>
-  <div class="profile-nav"></div>
+  <div class="profile-nav">
+    <button class="profile-button" mat-button [matMenuTriggerFor]="menu">
+      <mat-icon class="menu-icon">menu</mat-icon>
+      <div class="profile-icon"></div>
+    </button>
+    <mat-menu class="profile-menu" #menu="matMenu">
+      <button *ngIf="isAuthenticated" class="menu-item" mat-menu-item>Item 1</button>
+      <button 
+      (click)="onOpenSignInModal()" 
+      *ngIf="!isAuthenticated" 
+      class="menu-item" mat-menu-item>
+        Log In
+      </button>
+      <button 
+      (click)="onOpenSignUpModal()"
+      *ngIf="!isAuthenticated" 
+      class="menu-item" mat-menu-item>Sign Up</button>
+    </mat-menu>
+  </div>
 </nav>

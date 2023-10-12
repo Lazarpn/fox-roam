@@ -10,10 +10,16 @@ import { HttpLoaderFactory } from './shared/loaders/http-loader-factory';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 import { HeaderComponent } from './shared/components/header/header.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 
 @NgModule({
   declarations: [FrComponent, HeaderComponent],
   imports: [
+    MatButtonModule,
+    MatMenuModule,
+    MatIconModule,
     BrowserModule,
     FrRoutingModule,
     SharedModule,

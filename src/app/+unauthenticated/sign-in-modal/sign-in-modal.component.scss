@@ -1,0 +1,24 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.heading-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heading {
+  font-size: 28px;
+  color: var(--color-primary);
+}
+
+.close-modal {
+  all: unset;
+  cursor: pointer;
+}
+
+::ng-deep .fullscreen-dialog {
+}
