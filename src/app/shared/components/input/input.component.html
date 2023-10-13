@@ -1,0 +1,12 @@
+<p class="label" *ngIf="label">
+  <b>{{ label }}</b>
+</p>
+
+<input
+  (ngModelChange)="onChange($event)"
+  [ngModel]="value"
+  matInput
+  appDelayedInput
+  [value]="value"
+  [type]="type"
+  [placeholder]="placeholder"/>

@@ -8,12 +8,15 @@ import { SignUpModalComponent } from './sign-up-modal/sign-up-modal.component';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpLoaderFactory } from '../shared/loaders/http-loader-factory';
 import { CommonModule } from '@angular/common';
+import { GoogleSignInComponent } from './google-sign-in/google-sign-in.component';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
-  declarations: [SignInModalComponent, SignUpModalComponent],
+  declarations: [SignInModalComponent, SignUpModalComponent, GoogleSignInComponent],
   imports: [
     CommonModule,
     FormsModule,
+    MatIconModule,
     UnauthenticatedRoutingModule,
     SharedModule,
     HttpClientModule,

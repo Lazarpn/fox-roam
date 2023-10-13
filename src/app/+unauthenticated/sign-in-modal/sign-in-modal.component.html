@@ -1,9 +1,23 @@
 <div class="heading-wrapper">
   <h2 class="heading" mat-dialog-title>Dobrodosli</h2>
-  <button mat-dialog-close class="close-modal">✖️</button>
+  <button mat-dialog-close class="close-modal">
+    <mat-icon class="icon-close">close</mat-icon>
+  </button>
 </div>
 
 <mat-dialog-content class="content-wrapper">
-  <form class="form"></form>
+  <form class="form">
+    <fr-input type="email" placeholder="Your email address" label="Enter your email here:">
+    </fr-input>
+
+    <fr-input type="password" placeholder="Your password" label="Enter your password here:">
+    </fr-input>
+
+    <div class="or-line">
+      <hr/>or<hr/>
+    </div>
+
+    <fr-google-sign-in></fr-google-sign-in>
+  </form>
 </mat-dialog-content>
 

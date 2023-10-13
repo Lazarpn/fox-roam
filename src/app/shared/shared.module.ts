@@ -8,12 +8,15 @@ import { ImageCropperModalComponent } from './components/image-cropper-modal cop
 import { MatCommonModule } from '@angular/material/core';
 import { MatDialogModule } from '@angular/material/dialog';
 import { ImageCropperModule } from 'ngx-image-cropper';
+import { InputComponent } from './components/input/input.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [CapitalizePipe, ImageCropperModalComponent],
+  declarations: [CapitalizePipe, ImageCropperModalComponent, InputComponent],
   imports: [
     CommonModule,
     ImageCropperModule,
+    FormsModule,
     MatCommonModule,
     MatDialogModule,
     TranslateModule.forChild({
@@ -24,6 +27,12 @@ import { ImageCropperModule } from 'ngx-image-cropper';
       },
     }),
   ],
-  exports: [ImageCropperModalComponent, MatCommonModule, MatDialogModule, CapitalizePipe],
+  exports: [
+    ImageCropperModalComponent,
+    MatCommonModule,
+    MatDialogModule,
+    CapitalizePipe,
+    InputComponent,
+  ],
 })
 export class SharedModule {}
